@@ -1,0 +1,49 @@
+{
+  "name": "@snowmap.fr/expo-volume-keys",
+  "version": "1.0.0",
+  "description": "Use the hardware volume buttons as input on Android. While a listener is subscribed the keys are consumed, so they stop changing the volume.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build",
+    "src",
+    "android",
+    "expo-module.config.json",
+    "!android/build",
+    "!android/.gradle"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "android",
+    "volume",
+    "volume-buttons",
+    "hardware-keys"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbtimbtimb/expo-volume-keys.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timbtimbtimb/expo-volume-keys/issues"
+  },
+  "homepage": "https://github.com/timbtimbtimb/expo-volume-keys#readme",
+  "author": "Timothée Billiet Cadart <billiet.timothee@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "expo": ">=57"
+  },
+  "devDependencies": {
+    "expo": "^57.0.26",
+    "typescript": "~5.9.0"
+  }
+}
